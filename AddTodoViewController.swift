@@ -22,6 +22,8 @@ class AddTodoViewController: UIViewController {
         let toDo = ToDo()
     toDo.Listname = listname.text!
         previousVC.toDos.append(toDo)
+        previousVC.tableView.reloadData()
+         navigationController?.popViewController(animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,7 +11,7 @@ import UIKit
 class ToDo
 {
     var Listname = ""
-    var important = false
-
-
+    var done = false
+    var smallDescription = ""
+    var Description = "Description"
 }

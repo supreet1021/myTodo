@@ -75,18 +75,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gis-V2-r8m">
-                                <rect key="frame" x="155" y="544" width="104" height="40"/>
-                                <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                <state key="normal" title="Update">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="Update:" destination="ix4-qF-1cP" eventType="touchUpInside" id="qjh-bp-XzC"/>
-                                    <action selector="update:" destination="rfN-mH-AxO" eventType="touchUpInside" id="L2i-eL-GMm"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oio-CL-Vlo">
                                 <rect key="frame" x="191" y="118" width="219" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -123,6 +111,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1p-w3-KRH">
+                                <rect key="frame" x="41" y="663" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="nw1-6T-8Ng"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="DeleteTapped:" destination="rfN-mH-AxO" eventType="touchUpInside" id="HNM-LJ-hYC"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhm-3a-PH0">
                                 <rect key="frame" x="273" y="663" width="100" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -139,18 +141,17 @@
                                     <action selector="CancelTapped:" destination="rfN-mH-AxO" eventType="touchUpInside" id="wM7-N5-rFL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1p-w3-KRH">
-                                <rect key="frame" x="41" y="663" width="100" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="nw1-6T-8Ng"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Delete">
-                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVl-ba-ane">
+                                <rect key="frame" x="157" y="576" width="100" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="DeleteTapped:" destination="rfN-mH-AxO" eventType="touchUpInside" id="HNM-LJ-hYC"/>
+                                    <action selector="Update:" destination="ix4-qF-1cP" eventType="touchUpInside" id="IiI-aI-LS4"/>
+                                    <action selector="Update:" destination="rfN-mH-AxO" eventType="touchUpInside" id="w9y-vy-Kvc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -162,8 +163,6 @@
                             <constraint firstItem="J1p-w3-KRH" firstAttribute="leading" secondItem="Y4C-uO-NUX" secondAttribute="leading" constant="41" id="ig7-C5-Iad"/>
                             <constraint firstItem="Y4C-uO-NUX" firstAttribute="bottom" secondItem="J1p-w3-KRH" secondAttribute="bottom" constant="159" id="kZA-yK-Cq3"/>
                             <constraint firstItem="J1p-w3-KRH" firstAttribute="top" secondItem="rhm-3a-PH0" secondAttribute="top" id="kuz-np-Byz"/>
-                            <constraint firstItem="gis-V2-r8m" firstAttribute="leading" secondItem="Y4C-uO-NUX" secondAttribute="leading" constant="155" id="nMR-el-DLO"/>
-                            <constraint firstItem="Y4C-uO-NUX" firstAttribute="trailing" secondItem="gis-V2-r8m" secondAttribute="trailing" constant="155" id="ukA-Qx-2Bq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y4C-uO-NUX"/>
                     </view>
@@ -242,11 +241,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sr7-ea-zJ3">
+                                <rect key="frame" x="173" y="678" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="done:" destination="DnJ-Fh-Uav" eventType="valueChanged" id="KUu-22-WYO"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2dQ-qE-bWb"/>
                     </view>
                     <connections>
+                        <outlet property="Description" destination="Vuz-dZ-v2N" id="lI6-JA-u4Q"/>
+                        <outlet property="doneSwitch" destination="sr7-ea-zJ3" id="Nao-y5-B5a"/>
                         <outlet property="listname" destination="erR-8D-1d4" id="Sto-d6-KPg"/>
                         <outlet property="smallDescription" destination="VJo-e7-i48" id="Q4g-Sw-S4Z"/>
                     </connections>

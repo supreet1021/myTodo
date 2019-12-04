@@ -10,6 +10,7 @@ import UIKit
 
 class ToDoTableViewController: UITableViewController {
     var toDos : [ToDo] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,19 +26,26 @@ class ToDoTableViewController: UITableViewController {
     {
         let grocery = ToDo()
         grocery.Listname = "Grocery"
-        grocery.important = true
+        grocery.done = true
+        grocery.smallDescription = "weekly grocery"
+        grocery.Description = "milk"
  
         
         let assignment = ToDo()
         assignment.Listname = "Assignment"
-     
+          assignment.smallDescription = "ios assignment"
+     assignment.Description = "assignment 2 "
         
         let interview = ToDo()
       interview.Listname = "Interview"
-           interview.important = true
-       
+           interview.done = true
+         interview.smallDescription = "job interview"
+       interview.Description = "walmart"
+        
         let project = ToDo()
         project.Listname = "Project milestone"
+     project.smallDescription = "android project"
+        project.Description = "Description"
         
         return [grocery,assignment,project,interview]
         
@@ -55,7 +63,7 @@ class ToDoTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
         let toDo = toDos[indexPath.row]
-        if toDo.important
+        if toDo.done
         {
                cell.textLabel?.text =  "❗️" + toDo.Listname
             
@@ -71,6 +79,9 @@ class ToDoTableViewController: UITableViewController {
     }
    
     
+
+    
+        
    
  
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

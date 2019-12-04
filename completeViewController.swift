@@ -17,10 +17,21 @@ class completeViewController: UIViewController {
     var selectedToDo = ToDo()
  
 
+ 
     
+    @IBAction func Update(_ sender: Any) {
+        let toDo = ToDo()
+        toDo.Description = Description.text!
+        toDo.smallDescription = smallDescription.text!
+       lname.text = toDo.Listname
+        
     
-    @IBAction func update(_ sender: Any) {
+        previousVC.tableView.reloadData()
+        navigationController?.popViewController(animated: true)
+     
     }
+    
+    
     
     @IBAction func DeleteTapped(_ sender: UIButton) {
         var index = 0
@@ -37,11 +48,17 @@ class completeViewController: UIViewController {
         
     }
     @IBAction func CancelTapped(_ sender: UIButton) {
+        previousVC.tableView.reloadData()
+        navigationController?.popViewController(animated: true)
+        
     }
     override func viewDidLoad() {
         
         super.viewDidLoad()
         lname.text = selectedToDo.Listname
+        smallDescription.text = selectedToDo.smallDescription
+        Description.text = selectedToDo.Description
+       
         // Do any additional setup after loading the view.
     }
     

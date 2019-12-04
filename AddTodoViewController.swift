@@ -10,17 +10,20 @@ import UIKit
 
 class AddTodoViewController: UIViewController {
      var previousVC = ToDoTableViewController() 
-    @IBOutlet weak var Description: UITextView!
+
+    @IBOutlet weak var Description: UILabel!
     @IBOutlet weak var smallDescription: UITextField!
     @IBOutlet weak var listname: UITextField!
     
-    @IBAction func Cancel(_ sender: UIButton) {
-    }
-    @IBAction func Delete(_ sender: UIButton) {
-    }
+    @IBOutlet weak var doneSwitch: UISwitch!
+    
     @IBAction func Update(_ sender: UIButton) {
         let toDo = ToDo()
+   toDo.Description = Description.text!
+   toDo.smallDescription = smallDescription.text!
     toDo.Listname = listname.text!
+        toDo.done = doneSwitch.isOn
+   
         previousVC.toDos.append(toDo)
         previousVC.tableView.reloadData()
          navigationController?.popViewController(animated: true)
